@@ -20,7 +20,8 @@ SOURCES += main.cpp\
 HEADERS  += dashboard.h \
     api/lptwindowsapi.h \
     api/lptunixapi.h \
-    api/lptapi.h \
-    api/lptapifactory.h
+    api/portapifactory.h \
+    api/portapi.h \
+    api/lpt/lptapi.h
 
 FORMS    += dashboard.ui

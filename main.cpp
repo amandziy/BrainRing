@@ -4,8 +4,8 @@
 
 #include "dashboard.h"
 
-#include "api/lptapi.h"
-#include "api/lptapifactory.h"
+#include "api/portapi.h"
+#include "api/portapifactory.h"
 
 /**
  * @brief applyGlobalAppStyle - set application wide style.
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
     applyCharsetEncoding("UTF-8");
 
-    LptApi *api = (new LptApiFactory())->getLptPortApi();
+    PortApi *portApi = (new PortApiFactory())->getPortApi();
 
     Dashboard dashboard;
     dashboard.show();
