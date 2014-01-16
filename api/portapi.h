@@ -16,7 +16,6 @@ protected:
     }
 
 public:
-
     /**
      * @brief drop - turn off all outputs
      */

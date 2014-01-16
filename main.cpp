@@ -45,6 +45,8 @@ int main(int argc, char *argv[])
     applyCharsetEncoding("UTF-8");
 
     PortApi *portApi = (new PortApiFactory())->getPortApi();
+    portApi->turnOn(2);
+
 
     Dashboard dashboard;
     dashboard.show();

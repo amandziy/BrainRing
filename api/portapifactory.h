@@ -2,8 +2,9 @@
 #define PORTAPIFACTORY_H
 
 #include "api/portapi.h"
-#include "api/lptunixapi.h"
-#include "api/lptwindowsapi.h"
+#include "api/lpt/lptapi.h"
+#include "api/lpt/lptunixapi.h"
+#include "api/lpt/lptwindowsapi.h"
 
 class PortApiFactory {
 
@@ -18,9 +19,9 @@ public:
 
         // select system specific API
         #ifdef Q_OS_WIN32 || Q_OS_WIN64
-            portApi = new LptWindowsApi();
+            portApi = (PortApi *) new LptWindowsApi();
         #else
-            portApi = new LptUnixApi();
+            portApi = (PortApi *) new LptUnixApi();
         #endif
 
         }

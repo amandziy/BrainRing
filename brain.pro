@@ -14,12 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         dashboard.cpp \
-    api/lptwindowsapi.cpp \
-    api/lptunixapi.cpp
+    api/lpt/lptwindowsapi.cpp \
+    api/lpt/lptunixapi.cpp \
+    api/lpt/lptapi.cpp
 
 HEADERS  += dashboard.h \
-    api/lptwindowsapi.h \
-    api/lptunixapi.h \
+    api/lpt/lptwindowsapi.h \
+    api/lpt/lptunixapi.h \
     api/portapifactory.h \
     api/portapi.h \
     api/lpt/lptapi.h
